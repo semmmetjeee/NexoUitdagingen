@@ -13,7 +13,9 @@ import org.bukkit.event.entity.*;
 import org.bukkit.event.inventory.*;
 import org.bukkit.event.player.*;
 import org.bukkit.event.vehicle.VehicleMoveEvent;
+import org.bukkit.inventory.AnvilInventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.MerchantInventory;
 
 import java.util.*;
 
