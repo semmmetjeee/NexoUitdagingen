@@ -1,0 +1,23 @@
+name: Build
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - run: mvn -B -ntp -Drevision=dev clean package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NexoUitdagingen-dev
+          path: target/NexoUitdagingen-dev.jar
+          if-no-files-found: error

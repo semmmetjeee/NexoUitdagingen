@@ -1,0 +1,27 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - id: version
+        shell: bash
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+      - run: mvn -B -ntp -Drevision="${{ steps.version.outputs.version }}" clean package
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          JAR="target/NexoUitdagingen-${VERSION}.jar"
+          gh release create "$GITHUB_REF_NAME" "$JAR" --title "NexoUitdagingen $GITHUB_REF_NAME" --generate-notes

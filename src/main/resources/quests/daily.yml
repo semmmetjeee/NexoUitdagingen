@@ -1,0 +1,213 @@
+quests:
+  mine_stone:
+    name: "&#3bd9ff&lSteenhouwer"
+    type: BREAK_BLOCK
+    target: "STONE|COBBLESTONE|DEEPSLATE"
+    amount: 256
+    material: STONE_PICKAXE
+    lore:
+      - ""
+      - "&7Breek &f%amount% &7steenachtige blokken."
+      - ""
+      - "&#f6d151Voortgang: &f%progress%&8/&f%amount% &8(%percent%%)"
+    rewards:
+      - "[CONSOLE] experience add %player% 250 points"
+      - "[MESSAGE] &a+250 XP voor je daily quest!"
+
+  mine_ores:
+    name: "&#3bd9ff&lErtszoeker"
+    type: BREAK_BLOCK
+    target: "COAL_ORE|DEEPSLATE_COAL_ORE|IRON_ORE|DEEPSLATE_IRON_ORE|COPPER_ORE|DEEPSLATE_COPPER_ORE|GOLD_ORE|DEEPSLATE_GOLD_ORE|REDSTONE_ORE|DEEPSLATE_REDSTONE_ORE|LAPIS_ORE|DEEPSLATE_LAPIS_ORE|DIAMOND_ORE|DEEPSLATE_DIAMOND_ORE|EMERALD_ORE|DEEPSLATE_EMERALD_ORE"
+    amount: 64
+    material: IRON_PICKAXE
+    lore: ["", "&7Mine &f%amount% &7ertsen.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 300 points"]
+
+  mine_diamonds:
+    name: "&#3bd9ff&lDiamantkoorts"
+    type: BREAK_BLOCK
+    target: "DIAMOND_ORE|DEEPSLATE_DIAMOND_ORE"
+    amount: 8
+    material: DIAMOND
+    lore: ["", "&7Mine &f%amount% &7diamond ores.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] give %player% diamond 2", "[CONSOLE] experience add %player% 350 points"]
+
+  lumberjack:
+    name: "&#3bd9ff&lHouthakker"
+    type: BREAK_BLOCK
+    target: "OAK_LOG|SPRUCE_LOG|BIRCH_LOG|JUNGLE_LOG|ACACIA_LOG|DARK_OAK_LOG|MANGROVE_LOG|CHERRY_LOG|PALE_OAK_LOG"
+    amount: 128
+    material: IRON_AXE
+    lore: ["", "&7Hak &f%amount% &7logs.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  builder:
+    name: "&#3bd9ff&lBouwer"
+    type: PLACE_BLOCK
+    target: ANY
+    amount: 192
+    material: BRICKS
+    lore: ["", "&7Plaats &f%amount% &7blokken.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  zombie_hunter:
+    name: "&#3bd9ff&lZombie Jager"
+    type: KILL_MOB
+    target: "ZOMBIE|HUSK|DROWNED|ZOMBIE_VILLAGER"
+    amount: 30
+    material: ROTTEN_FLESH
+    lore: ["", "&7Dood &f%amount% &7zombies.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 300 points"]
+
+  monster_hunter:
+    name: "&#3bd9ff&lMonsterjager"
+    type: KILL_MOB
+    target: "ZOMBIE|SKELETON|CREEPER|SPIDER|ENDERMAN|WITCH|SLIME"
+    amount: 50
+    material: IRON_SWORD
+    lore: ["", "&7Dood &f%amount% &7hostile mobs.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 350 points"]
+
+  skeletons:
+    name: "&#3bd9ff&lBottenbreker"
+    type: KILL_MOB
+    target: "SKELETON|STRAY|BOGGED"
+    amount: 25
+    material: BONE
+    lore: ["", "&7Dood &f%amount% &7skeletons.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 300 points"]
+
+  fisher:
+    name: "&#3bd9ff&lVisser"
+    type: FISH
+    target: ANY
+    amount: 12
+    material: FISHING_ROD
+    lore: ["", "&7Vang &f%amount% &7items met een hengel.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  baker:
+    name: "&#3bd9ff&lBakker"
+    type: CRAFT
+    target: "BREAD"
+    amount: 32
+    material: BREAD
+    lore: ["", "&7Craft &f%amount% &7broden.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  cookie_monster:
+    name: "&#3bd9ff&lKoekiemonster"
+    type: CRAFT
+    target: "COOKIE"
+    amount: 64
+    material: COOKIE
+    lore: ["", "&7Bak &f%amount% &7koekjes.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 300 points"]
+
+  smelter:
+    name: "&#3bd9ff&lSmelter"
+    type: SMELT
+    target: ANY
+    amount: 48
+    material: FURNACE
+    lore: ["", "&7Haal &f%amount% &7gesmolten items uit ovens.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  breeder:
+    name: "&#3bd9ff&lDierenverzorger"
+    type: BREED
+    target: ANY
+    amount: 10
+    material: WHEAT
+    lore: ["", "&7Breed &f%amount% &7dieren.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 300 points"]
+
+  tamer:
+    name: "&#3bd9ff&lDierenvriend"
+    type: TAME
+    target: ANY
+    amount: 3
+    material: BONE
+    lore: ["", "&7Tem &f%amount% &7dieren.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 300 points"]
+
+  enchanter:
+    name: "&#3bd9ff&lBetoveraar"
+    type: ENCHANT
+    target: ANY
+    amount: 5
+    material: ENCHANTING_TABLE
+    lore: ["", "&7Enchant &f%amount% &7items.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 350 points"]
+
+  foodie:
+    name: "&#3bd9ff&lEet Smakelijk"
+    type: CONSUME
+    target: ANY
+    amount: 24
+    material: COOKED_BEEF
+    lore: ["", "&7Eet of drink &f%amount% &7items.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 200 points"]
+
+  trader:
+    name: "&#3bd9ff&lHandelaar"
+    type: TRADE
+    target: ANY
+    amount: 12
+    material: EMERALD
+    lore: ["", "&7Doe &f%amount% &7villager trades.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 350 points"]
+
+  walker:
+    name: "&#3bd9ff&lWandelaar"
+    type: WALK
+    target: ANY
+    amount: 2500
+    material: LEATHER_BOOTS
+    lore: ["", "&7Loop &f%amount% &7meter.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount% m"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  sprinter:
+    name: "&#3bd9ff&lSprinter"
+    type: SPRINT
+    target: ANY
+    amount: 1500
+    material: RABBIT_FOOT
+    lore: ["", "&7Sprint &f%amount% &7meter.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount% m"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  swimmer:
+    name: "&#3bd9ff&lZwemmer"
+    type: SWIM
+    target: ANY
+    amount: 500
+    material: HEART_OF_THE_SEA
+    lore: ["", "&7Zwem &f%amount% &7meter.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount% m"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  jumper:
+    name: "&#3bd9ff&lSpringveer"
+    type: JUMP
+    target: ANY
+    amount: 150
+    material: SLIME_BALL
+    lore: ["", "&7Spring &f%amount% &7keer.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 200 points"]
+
+  xp_farmer:
+    name: "&#3bd9ff&lXP Farmer"
+    type: XP_GAIN
+    target: ANY
+    amount: 750
+    material: EXPERIENCE_BOTTLE
+    lore: ["", "&7Verdien &f%amount% &7experience points.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 250 points"]
+
+  sleeper:
+    name: "&#3bd9ff&lWelterusten"
+    type: SLEEP
+    target: ANY
+    amount: 1
+    material: RED_BED
+    lore: ["", "&7Ga één keer succesvol slapen.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 150 points"]

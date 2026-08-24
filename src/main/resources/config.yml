@@ -1,0 +1,35 @@
+command:
+  name: "uitdagingen"
+  aliases:
+    - "quests"
+    - "quest"
+    - "challenges"
+  permission: "nexouitdagingen.use"
+
+settings:
+  main-gui: "main"
+  personal-daily-count: 3
+  personal-weekly-count: 3
+  global-count: 3
+  daily-reset-hour: 0
+  weekly-reset-day: "MONDAY"
+  weekly-reset-hour: 0
+  timezone: "Europe/Amsterdam"
+  announce-personal-completion: false
+  announce-global-progress-milestones: true
+  global-progress-milestones: [25, 50, 75]
+  debug: false
+
+messages:
+  prefix: "&#3bd9ff&lNexoUitdagingen &8» &r"
+  no-permission: "&cJe hebt hier geen permissie voor."
+  player-only: "&cDit command kan alleen als speler gebruikt worden."
+  reload: "&aNexoUitdagingen is volledig herladen."
+  quest-completed: "&aUitdaging voltooid: &f%quest_name%&a!"
+  global-completed: "&#f6d151&lGLOBAL &8» &fDe server heeft &e%quest_name% &fvoltooid!"
+  global-milestone: "&#f6d151&lGLOBAL &8» &f%quest_name% &7is voor &e%percent%% &7voltooid!"
+  reset-player: "&aQuests van &f%player% &agereset."
+  reset-global: "&aGlobale quests zijn opnieuw gekozen."
+  reroll-player: "&aNieuwe &f%category% &aquests gekozen voor &f%player%&a."
+  unknown-player: "&cSpeler niet gevonden."
+  unknown-category: "&cOnbekende categorie. Gebruik daily, weekly of global."

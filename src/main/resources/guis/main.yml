@@ -1,0 +1,55 @@
+title: "<#3bd9ff:#f6d151>&lNEXO UITDAGINGEN"
+size: 45
+
+border:
+  material: GRAY_STAINED_GLASS_PANE
+  display_name: " "
+
+panes:
+  center:
+    slots: ["19-25"]
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+
+items:
+  daily:
+    slot: 20
+    material: CLOCK
+    display_name: "&#3bd9ff&lDAGELIJKSE UITDAGINGEN"
+    lore:
+      - ""
+      - "&7Je krijgt iedere dag &f3 willekeurige"
+      - "&7persoonlijke uitdagingen."
+      - ""
+      - "&#f6d151→ Klik om te openen"
+    actions: ["[GUI] daily"]
+
+  weekly:
+    slot: 22
+    material: BOOK
+    display_name: "&#f6d151&lWEKELIJKSE UITDAGINGEN"
+    lore:
+      - ""
+      - "&7Je krijgt iedere week &f3 willekeurige"
+      - "&7persoonlijke uitdagingen."
+      - ""
+      - "&#f6d151→ Klik om te openen"
+    actions: ["[GUI] weekly"]
+
+  global:
+    slot: 24
+    material: NETHER_STAR
+    display_name: "<#3bd9ff:#f6d151>&lGLOBALE UITDAGINGEN"
+    lore:
+      - ""
+      - "&7Werk samen met de hele server aan"
+      - "&f3 gezamenlijke uitdagingen&7."
+      - ""
+      - "&#f6d151→ Klik om te openen"
+    actions: ["[GUI] global"]
+
+  close:
+    slot: 40
+    material: BARRIER
+    display_name: "&c&lSLUITEN"
+    actions: ["[CLOSE]"]

@@ -1,0 +1,31 @@
+title: "&#3bd9ff&lDAGELIJKSE UITDAGINGEN"
+size: 45
+quest-category: DAILY
+
+border:
+  material: GRAY_STAINED_GLASS_PANE
+  display_name: " "
+
+quest-slots:
+  slots: [20, 22, 24]
+  active-name: "&#3bd9ff&l%quest_name%"
+  completed-name: "&a&l✔ %quest_name%"
+  completed-glow: true
+  lore:
+    - ""
+    - "&7Voltooi deze dagelijkse uitdaging."
+    - ""
+    - "&#f6d151Voortgang: &f%progress%&8/&f%amount%"
+    - "&8%percent%% voltooid"
+
+items:
+  back:
+    slot: 36
+    material: ARROW
+    display_name: "&#3bd9ff&lTERUG"
+    actions: ["[GUI] main"]
+  refresh:
+    slot: 40
+    material: SUNFLOWER
+    display_name: "&#f6d151&lREFRESH"
+    actions: ["[GUI] daily", "[SOUND] UI_BUTTON_CLICK 1 1"]

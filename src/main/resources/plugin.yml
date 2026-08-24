@@ -1,0 +1,12 @@
+name: NexoUitdagingen
+version: '${project.version}'
+main: me.semmmetje.nexouitdagingen.NexoUitdagingenPlugin
+api-version: '1.21'
+author: Semmmetje
+description: Daily, weekly and global server challenges with configurable GUIs and quest pools.
+softdepend: [PlaceholderAPI]
+permissions:
+  nexouitdagingen.use:
+    default: true
+  nexouitdagingen.admin:
+    default: op

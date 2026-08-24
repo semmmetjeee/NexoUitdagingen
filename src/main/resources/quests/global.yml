@@ -1,0 +1,91 @@
+quests:
+  cookie_keyall:
+    name: "<#3bd9ff:#f6d151>&lKoekjes voor Iedereen"
+    type: CRAFT
+    target: COOKIE
+    amount: 1000
+    material: COOKIE
+    lore:
+      - ""
+      - "&7Bak samen met de hele server"
+      - "&f%amount% koekjes&7!"
+      - ""
+      - "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%"
+      - "&8[%percent%% voltooid]"
+      - ""
+      - "&aReward: &fKeyall voor de server"
+    rewards:
+      - "[BROADCAST] &#f6d151&lKEYALL &8» &fDe server heeft 1.000 koekjes gebakken!"
+      - "[CONSOLE] say Configureer hier je crate key giveall command"
+
+  global_mining:
+    name: "<#3bd9ff:#f6d151>&lServer Mijnwerkers"
+    type: BREAK_BLOCK
+    target: ANY
+    amount: 50000
+    material: NETHERITE_PICKAXE
+    lore: ["", "&7Breek samen &f%amount% &7blokken.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%", "&8%percent%% voltooid", "", "&aReward: &fServer reward"]
+    rewards: ["[BROADCAST] &#3bd9ff&lGLOBAL &8» &f50.000 blocks gebroken!", "[CONSOLE] say Configureer global_mining rewards"]
+
+  mob_extermination:
+    name: "<#3bd9ff:#f6d151>&lMonsteruitroeiing"
+    type: KILL_MOB
+    target: ANY
+    amount: 10000
+    material: NETHERITE_SWORD
+    lore: ["", "&7Dood samen &f%amount% &7mobs.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%", "&8%percent%% voltooid"]
+    rewards: ["[BROADCAST] &#f6d151&lGLOBAL &8» &f10.000 mobs verslagen!", "[CONSOLE] say Configureer mob_extermination rewards"]
+
+  fishing_festival:
+    name: "<#3bd9ff:#f6d151>&lVisfestival"
+    type: FISH
+    target: ANY
+    amount: 1500
+    material: TROPICAL_FISH
+    lore: ["", "&7Vang samen &f%amount% &7items.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%", "&8%percent%% voltooid"]
+    rewards: ["[BROADCAST] &#3bd9ff&lGLOBAL &8» &fHet visfestival is voltooid!", "[CONSOLE] say Configureer fishing_festival rewards"]
+
+  global_builder:
+    name: "<#3bd9ff:#f6d151>&lBouwproject"
+    type: PLACE_BLOCK
+    target: ANY
+    amount: 30000
+    material: SCAFFOLDING
+    lore: ["", "&7Plaats samen &f%amount% &7blokken.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%", "&8%percent%% voltooid"]
+    rewards: ["[BROADCAST] &#f6d151&lGLOBAL &8» &fHet serverbouwproject is voltooid!", "[CONSOLE] say Configureer global_builder rewards"]
+
+  global_breeding:
+    name: "<#3bd9ff:#f6d151>&lBabyboom"
+    type: BREED
+    target: ANY
+    amount: 1000
+    material: EGG
+    lore: ["", "&7Breed samen &f%amount% &7dieren.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%", "&8%percent%% voltooid"]
+    rewards: ["[BROADCAST] &#3bd9ff&lGLOBAL &8» &fBabyboom voltooid!", "[CONSOLE] say Configureer global_breeding rewards"]
+
+  global_trading:
+    name: "<#3bd9ff:#f6d151>&lWereldeconomie"
+    type: TRADE
+    target: ANY
+    amount: 2500
+    material: EMERALD_BLOCK
+    lore: ["", "&7Doe samen &f%amount% &7villager trades.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%", "&8%percent%% voltooid"]
+    rewards: ["[BROADCAST] &#f6d151&lGLOBAL &8» &fDe wereldeconomie draait op volle toeren!", "[CONSOLE] say Configureer global_trading rewards"]
+
+  global_travel:
+    name: "<#3bd9ff:#f6d151>&lRond de Wereld"
+    type: WALK
+    target: ANY
+    amount: 250000
+    material: COMPASS
+    lore: ["", "&7Loop samen &f%amount% &7meter.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount% m", "&8%percent%% voltooid"]
+    rewards: ["[BROADCAST] &#3bd9ff&lGLOBAL &8» &fDe server heeft samen 250 km gelopen!", "[CONSOLE] say Configureer global_travel rewards"]
+
+  global_crafting:
+    name: "<#3bd9ff:#f6d151>&lCraftmarathon"
+    type: CRAFT
+    target: ANY
+    amount: 15000
+    material: CRAFTING_TABLE
+    lore: ["", "&7Craft samen &f%amount% &7items.", "", "&#f6d151Servervoortgang: &f%progress%&8/&f%amount%", "&8%percent%% voltooid"]
+    rewards: ["[BROADCAST] &#f6d151&lGLOBAL &8» &f15.000 items gecraft!", "[CONSOLE] say Configureer global_crafting rewards"]

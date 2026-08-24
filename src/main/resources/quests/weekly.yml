@@ -1,0 +1,97 @@
+quests:
+  mega_miner:
+    name: "<#3bd9ff:#f6d151>&lMega Miner"
+    type: BREAK_BLOCK
+    target: ANY
+    amount: 5000
+    material: DIAMOND_PICKAXE
+    lore: ["", "&7Breek deze week &f%amount% &7blokken.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount% &8(%percent%%)"]
+    rewards: ["[CONSOLE] experience add %player% 2500 points", "[CONSOLE] give %player% diamond 4"]
+  ore_master:
+    name: "<#3bd9ff:#f6d151>&lOre Master"
+    type: BREAK_BLOCK
+    target: "COAL_ORE|DEEPSLATE_COAL_ORE|IRON_ORE|DEEPSLATE_IRON_ORE|COPPER_ORE|DEEPSLATE_COPPER_ORE|GOLD_ORE|DEEPSLATE_GOLD_ORE|REDSTONE_ORE|DEEPSLATE_REDSTONE_ORE|LAPIS_ORE|DEEPSLATE_LAPIS_ORE|DIAMOND_ORE|DEEPSLATE_DIAMOND_ORE|EMERALD_ORE|DEEPSLATE_EMERALD_ORE"
+    amount: 750
+    material: DIAMOND_ORE
+    lore: ["", "&7Mine &f%amount% &7ertsen deze week.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 3000 points", "[CONSOLE] give %player% diamond 5"]
+  mob_slayer:
+    name: "<#3bd9ff:#f6d151>&lMob Slayer"
+    type: KILL_MOB
+    target: ANY
+    amount: 750
+    material: NETHERITE_SWORD
+    lore: ["", "&7Dood &f%amount% &7mobs.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 3000 points"]
+  master_builder:
+    name: "<#3bd9ff:#f6d151>&lMaster Builder"
+    type: PLACE_BLOCK
+    target: ANY
+    amount: 3000
+    material: BRICKS
+    lore: ["", "&7Plaats &f%amount% &7blokken.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 2500 points"]
+  fishing_trip:
+    name: "<#3bd9ff:#f6d151>&lVisweek"
+    type: FISH
+    target: ANY
+    amount: 100
+    material: FISHING_ROD
+    lore: ["", "&7Vang &f%amount% &7items met je hengel.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 2500 points"]
+  breeder_week:
+    name: "<#3bd9ff:#f6d151>&lBoerderijweek"
+    type: BREED
+    target: ANY
+    amount: 75
+    material: GOLDEN_CARROT
+    lore: ["", "&7Breed &f%amount% &7dieren.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 2500 points"]
+  trading_empire:
+    name: "<#3bd9ff:#f6d151>&lHandelsimperium"
+    type: TRADE
+    target: ANY
+    amount: 100
+    material: EMERALD_BLOCK
+    lore: ["", "&7Doe &f%amount% &7villager trades.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 3000 points", "[CONSOLE] give %player% emerald 16"]
+  marathon:
+    name: "<#3bd9ff:#f6d151>&lMarathon"
+    type: WALK
+    target: ANY
+    amount: 25000
+    material: DIAMOND_BOOTS
+    lore: ["", "&7Loop &f%amount% &7meter.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount% m"]
+    rewards: ["[CONSOLE] experience add %player% 2500 points"]
+  sky_traveller:
+    name: "<#3bd9ff:#f6d151>&lLuchtreiziger"
+    type: FLY
+    target: ANY
+    amount: 10000
+    material: ELYTRA
+    lore: ["", "&7Vlieg &f%amount% &7meter.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount% m"]
+    rewards: ["[CONSOLE] experience add %player% 3000 points"]
+  xp_grinder:
+    name: "<#3bd9ff:#f6d151>&lXP Grinder"
+    type: XP_GAIN
+    target: ANY
+    amount: 10000
+    material: EXPERIENCE_BOTTLE
+    lore: ["", "&7Verdien &f%amount% &7XP points.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 3500 points"]
+  crafter:
+    name: "<#3bd9ff:#f6d151>&lCrafting Machine"
+    type: CRAFT
+    target: ANY
+    amount: 1500
+    material: CRAFTING_TABLE
+    lore: ["", "&7Craft &f%amount% &7items.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 2750 points"]
+  smelting_factory:
+    name: "<#3bd9ff:#f6d151>&lSmeltfabriek"
+    type: SMELT
+    target: ANY
+    amount: 750
+    material: BLAST_FURNACE
+    lore: ["", "&7Smelt &f%amount% &7items.", "", "&#f6d151Voortgang: &f%progress%&8/&f%amount%"]
+    rewards: ["[CONSOLE] experience add %player% 2750 points"]
