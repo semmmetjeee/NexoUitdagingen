@@ -16,7 +16,6 @@ import org.bukkit.event.vehicle.VehicleMoveEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 public final class QuestListener implements Listener {
     private final NexoUitdagingenPlugin plugin;
@@ -43,11 +42,10 @@ public final class QuestListener implements Listener {
     @EventHandler(ignoreCancelled=true) public void xp(PlayerExpChangeEvent e){if(e.getAmount()>0)add(e.getPlayer(),QuestType.XP_GAIN,"ANY",e.getAmount());}
     @EventHandler public void level(PlayerLevelChangeEvent e){if(e.getNewLevel()>e.getOldLevel())add(e.getPlayer(),QuestType.LEVEL_GAIN,"ANY",e.getNewLevel()-e.getOldLevel());}
     @EventHandler public void death(PlayerDeathEvent e){add(e.getEntity(),QuestType.DEATH,"ANY",1);}
-    @EventHandler(ignoreCancelled=true) public void jump(PlayerJumpEvent e){add(e.getPlayer(),QuestType.JUMP,"ANY",1);}
     @EventHandler public void bed(PlayerBedEnterEvent e){if(e.getBedEnterResult()==PlayerBedEnterEvent.BedEnterResult.OK)add(e.getPlayer(),QuestType.SLEEP,"ANY",1);}
     @EventHandler public void join(PlayerJoinEvent e){plugin.quests().ensureAssignments(e.getPlayer());add(e.getPlayer(),QuestType.JOIN,"ANY",1);plugin.quests().evaluatePlaceholderQuests(e.getPlayer());}
     @EventHandler(ignoreCancelled=true) public void advancement(PlayerAdvancementDoneEvent e){add(e.getPlayer(),QuestType.ADVANCEMENT,e.getAdvancement().getKey().toString(),1);}
-    @EventHandler(ignoreCancelled=true,priority=EventPriority.MONITOR) public void move(PlayerMoveEvent e){if(e.getTo()==null||e.getFrom().getWorld()!=e.getTo().getWorld())return;double distance=e.getFrom().distance(e.getTo());if(distance<=0||distance>25)return;Player p=e.getPlayer();long meters=Math.max(0,Math.round(distance));if(meters==0)return;if(p.isGliding()||p.isFlying())add(p,QuestType.FLY,"ANY",meters);else if(p.isSwimming())add(p,QuestType.SWIM,"ANY",meters);else if(p.isSprinting())add(p,QuestType.SPRINT,"ANY",meters);else if(p.getVehicle()==null)add(p,QuestType.WALK,"ANY",meters);}
+    @EventHandler(ignoreCancelled=true,priority=EventPriority.MONITOR) public void move(PlayerMoveEvent e){if(e.getTo()==null||e.getFrom().getWorld()!=e.getTo().getWorld())return;double distance=e.getFrom().distance(e.getTo());if(distance<=0||distance>25)return;Player p=e.getPlayer();double dy=e.getTo().getY()-e.getFrom().getY();if(dy>0.35&&p.getVehicle()==null&&!p.isFlying()&&!p.isGliding()&&!p.isSwimming())add(p,QuestType.JUMP,"ANY",1);long meters=Math.max(0,Math.round(distance));if(meters==0)return;if(p.isGliding()||p.isFlying())add(p,QuestType.FLY,"ANY",meters);else if(p.isSwimming())add(p,QuestType.SWIM,"ANY",meters);else if(p.isSprinting())add(p,QuestType.SPRINT,"ANY",meters);else if(p.getVehicle()==null)add(p,QuestType.WALK,"ANY",meters);}
     @EventHandler(ignoreCancelled=true) public void vehicle(VehicleMoveEvent e){if(e.getFrom().getWorld()!=e.getTo().getWorld())return;double d=e.getFrom().distance(e.getTo());if(d<=0||d>50)return;long m=Math.max(1,Math.round(d));for(Entity passenger:e.getVehicle().getPassengers())if(passenger instanceof Player p){if(e.getVehicle() instanceof Boat)add(p,QuestType.BOAT_TRAVEL,"ANY",m);else if(e.getVehicle() instanceof Minecart)add(p,QuestType.MINECART_TRAVEL,"ANY",m);else if(e.getVehicle() instanceof AbstractHorse)add(p,QuestType.HORSE_TRAVEL,"ANY",m);}}
     @EventHandler public void command(PlayerCommandPreprocessEvent e){String raw=e.getMessage().substring(1).split("\\s+")[0].toLowerCase(Locale.ROOT);add(e.getPlayer(),QuestType.COMMAND,raw,1);}
 }
